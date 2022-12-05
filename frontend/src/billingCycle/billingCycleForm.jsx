@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { reduxForm, Field } from 'redux-form'
-import labelAndInput from "../common/form/labelAndInput";
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import { bindActionCreators } from "redux";
 
-import {init} from './billingCycleActions'
-
+import { init } from './billingCycleActions'
+import labelAndInput from "../common/form/labelAndInput";
+import CreditList from "./creditList";
 
 
 class BillingCycleForm extends Component {
@@ -20,13 +20,14 @@ class BillingCycleForm extends Component {
                         label='Mês' cols='12 4' placeholder='Informe o mês' />
                     <Field name='year' component={labelAndInput} type='number' readOnly={readOnly}
                         label='Ano' cols='12 4' placeholder='Informe o Ano' />
+                    <CreditList cols='12 6' />
 
                 </div>
                 <div className="box-footer">
                     <button type='submit' className={`btn btn-${this.props.submitClass}`}>
-                    {this.props.submitLabel}
+                        {this.props.submitLabel}
                     </button>
-                    <button type="button" className="btn btn-defaults=" 
+                    <button type="button" className="btn btn-defaults="
                         onClick={this.props.init}>Cancelar</button>
                 </div>
             </form>
@@ -34,6 +35,6 @@ class BillingCycleForm extends Component {
     }
 }
 
-BillingCycleForm = reduxForm({ form: 'billingCycleForm', destroyOnUnmount:false })(BillingCycleForm)
-const mapDispatchToProps = dispatch => bindActionCreators({init}, dispatch)
+BillingCycleForm = reduxForm({ form: 'billingCycleForm', destroyOnUnmount: false })(BillingCycleForm)
+const mapDispatchToProps = dispatch => bindActionCreators({ init }, dispatch)
 export default connect(null, mapDispatchToProps)(BillingCycleForm)

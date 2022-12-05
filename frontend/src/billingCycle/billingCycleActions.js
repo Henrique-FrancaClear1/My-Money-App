@@ -52,6 +52,7 @@ export function showDelete(billingCycle) {
     return Tabs(billingCycle,'tabDelete')
 }
 
+// flexibilidade para os metodos tabUpdate e tabDelete
 function Tabs(billingCycle,tabs) {
     
     return [
