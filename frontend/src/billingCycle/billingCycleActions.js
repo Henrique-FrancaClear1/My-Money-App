@@ -36,7 +36,7 @@ export function create(values) {
 
 export function showUpdate(billingCycle){
     return[
-        showTabs('tabUpadate'),
+        showTabs('tabUpdate'), 
         selectTab('tabUpdate')
     ]
 }
