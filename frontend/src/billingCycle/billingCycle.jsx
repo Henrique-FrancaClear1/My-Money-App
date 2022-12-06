@@ -20,6 +20,7 @@ class BillingCycle extends Component {
         this.props.init()
 
     }
+    
 
     render() {
         return (
@@ -29,6 +30,7 @@ class BillingCycle extends Component {
                 <Content>
                     <Tabs>
                         <TabsHeader>
+                            
                             <TabHearder label='Listar' icon='bars' target='tabList' />
                             <TabHearder label='Incluir' icon='plus' target='tabCreate' />
                             <TabHearder label='Alterar' icon='pencil' target='tabUpdate' />
