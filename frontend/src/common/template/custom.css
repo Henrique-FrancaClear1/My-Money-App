@@ -1,6 +1,6 @@
 .main-footer{
     position: fixed;
-    bottom: 0px;
+    bottom: 5px;
     width: 100%;
 }
 
@@ -10,4 +10,5 @@ button{
 
 .table-actions{
     width: 150px;
+    
 }
